@@ -14,6 +14,7 @@ listbox .input {
   flex-direction: row;
   padding-right: 2em;
   cursor: pointer;
+  color: #666;
 }
 
 listbox .input:focus ~ .listbox-icon {
@@ -36,7 +37,6 @@ listbox .listbox-icon {
 
 listbox .is-toggle-listbox {
   right: 0.3rem;
-  color: #22adff;
   font-size: 1.5rem;
 }
 

@@ -8,22 +8,53 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Select box</title>
+    <!-- styles -->
+    <style>
+        .is-flex {
+            display: flex;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="tablet-4 margin-3">
-        <!-- Demo custom select -->
-        <listbox id="select">
-            <list>
-                <list-item text="Option numero 1" value="op1">Option no 1</list-item>
-                <list-item text="Option numero 2" value="op2">Option no 2</list-item>
-                <list-item text="Option numero 3" value="op3">Option no 3</list-item>
-                <list-item text="Option numero 4" value="op4">Option no 4</list-item>
-                <list-item text="Option numero 5" value="op5">Option no 5</list-item>
-                <list-item text="Option numero 6" value="op6">Option no 6</list-item>
-            </list>
-        </listbox>
-    </div>
+    <mega class="color-light is-flex is-center-v is-distributed">
+        <h2 class="is-text-center">The Listbox</h2>
+        <a href="https://github.com/JorgeAntrax/listbox" class="button is-dark is-rounded">
+            <icon><i class="fa fa-github"></i></icon>
+            <span>Ir al repositorío</span>
+        </a>
+    </mega>
+    <row>
+        <div class="tablet-4 margin-3">
+            <!-- Demo custom select -->
+            <listbox id="select">
+                <list>
+                    <list-item text="Option numero 1" value="op1">Option no 1</list-item>
+                    <list-item text="Option numero 2" value="op2">Option no 2</list-item>
+                    <list-item text="Option numero 3" value="op3">Option no 3</list-item>
+                </list>
+            </listbox>
+        </div>
+        <div class="tablet-4 margin-3">
+            <!-- Demo custom select -->
+            <listbox id="select2">
+                <list>
+                    <list-item text="Option numero 1" value="op1">
+                        <icon><i class="fa fa-facebook"></i></icon>
+                        <span>facebook</span>
+                    </list-item>
+                    <list-item text="Option numero 2" value="op2">
+                        <icon><i class="fa fa-twitter"></i></icon>
+                        <span>Twitter</span>
+                    </list-item>
+                    <list-item text="Option numero 3" value="op3">
+                        <icon><i class="fa fa-instagram"></i></icon>
+                        <span>Instagram</span>
+                    </list-item>
+                </list>
+            </listbox>
+        </div>
+    </row>
     <!-- Select script import -->
     <script src="select.js"></script>
     <script>
@@ -31,10 +62,16 @@
             el: '#select', // the id container component.
             hasTwoIcons: true, // this property add padding-left to the input element.
             iconToggleClass: 'fa fa-angle-down', // classes for icon toggle.
-            iconLabelClass: 'fa fa-lock', //classes for icon left component.
+            iconLabelClass: 'fa fa-calendar', //classes for icon left component.
             rounded: false, // this property apply the class is-rounded for the input element
             name: 'input1',
             id: 'inputId'
+        });
+        var demo2 = new Listbox({
+            el: '#select2', // the id container component.
+            hasTwoIcons: false, // this property add padding-left to the input element.
+            iconToggleClass: 'fa fa-angle-down', // classes for icon toggle.
+            rounded: false, // this property apply the class is-rounded for the input element
         });
     </script>
 </body>
