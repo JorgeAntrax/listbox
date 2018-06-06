@@ -1,46 +1,46 @@
-listbox {
+list-box {
   position: relative;
 }
 
-listbox,
-listbox list,
-listbox list-item,
-listbox .input {
+list-box,
+list-box list,
+list-box list-item,
+list-box .input {
   display: flex;
   flex-direction: column;
 }
 
-listbox .input {
+list-box .input {
   flex-direction: row;
   padding-right: 2em;
   cursor: pointer;
   color: #666;
 }
 
-listbox .input:focus ~ .listbox-icon {
+list-box .input:focus ~ .listbox-icon {
   opacity: 1;
 }
 
-listbox .listbox-icon,
-listbox .is-toggle-listbox {
+list-box .listbox-icon,
+list-box .is-toggle-listbox {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
-listbox .listbox-icon {
+list-box .listbox-icon {
   left: 0.3rem;
   opacity: 0.7;
   transition: all .2s ease;
 }
 
-listbox .is-toggle-listbox {
+list-box .is-toggle-listbox {
   right: 0.3rem;
   font-size: 1.5rem;
 }
 
-listbox list {
+list-box list {
   position: absolute;
   top: 100%;
   width: 100%;
@@ -53,11 +53,11 @@ listbox list {
   transition: max-height .2s ease;
 }
 
-listbox list.is-visible {
+list-box list.is-visible {
   max-height: 100vh;
 }
 
-listbox list-item {
+list-box list-item {
   flex-direction: row;
   align-items: center;
   align-content: center;
@@ -66,11 +66,11 @@ listbox list-item {
   cursor: pointer;
 }
 
-listbox list-item:not(.is-active):hover {
+list-box list-item:not(.is-active):hover {
   background-color: whitesmoke;
 }
 
-listbox list-item.is-active {
+list-box list-item.is-active {
   background-color: #22adff;
   color: #fff;
 }
