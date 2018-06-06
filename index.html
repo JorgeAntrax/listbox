@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="kimera.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Select box</title>
+</head>
+
+<body>
+    <div class="tablet-4 margin-3">
+        <!-- Demo custom select -->
+        <listbox id="select">
+            <list>
+                <list-item text="Option numero 1" value="op1">Option no 1</list-item>
+                <list-item text="Option numero 2" value="op2">Option no 2</list-item>
+                <list-item text="Option numero 3" value="op3">Option no 3</list-item>
+                <list-item text="Option numero 4" value="op4">Option no 4</list-item>
+                <list-item text="Option numero 5" value="op5">Option no 5</list-item>
+                <list-item text="Option numero 6" value="op6">Option no 6</list-item>
+            </list>
+        </listbox>
+    </div>
+    <!-- Select script import -->
+    <script src="select.js"></script>
+    <script>
+        var demo = new Listbox({
+            el: '#select', // the id container component.
+            hasTwoIcons: true, // this property add padding-left to the input element.
+            iconToggleClass: 'fa fa-angle-down', // classes for icon toggle.
+            iconLabelClass: 'fa fa-lock', //classes for icon left component.
+            rounded: false, // this property apply the class is-rounded for the input element
+            name: 'input1',
+            id: 'inputId'
+        });
+    </script>
+</body>
+
+</html>
